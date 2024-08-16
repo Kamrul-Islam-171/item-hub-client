@@ -10,6 +10,10 @@ const ProductCard = ({ product }) => {
                         alt="Shoes" />
                 </figure>
                 <div className="card-body">
+                    <div className="flex">
+                        <p>{product?.created_at.date}</p>
+                        <p>{product?.created_at.time}</p>
+                    </div>
                     <div className="flex  gap-20 items-center">
                         <h2 className="card-title">{product?.name}</h2>
                         <p className="text-teal-500 text-lg">{product?.ratings}</p>

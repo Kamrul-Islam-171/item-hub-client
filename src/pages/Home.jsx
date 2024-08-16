@@ -90,11 +90,13 @@ const Home = () => {
                 </form>
             </div>
 
-            <div>
+            <div className=" flex flex-col items-center gap-5 mt-10">
+                <p className="text-xl font-semibold">Sort by product Price</p>
                 <select onChange={handleSelectChange} value={selectedOption} className="py-3 px-5 bg-teal-500 text-white ">
                     <option value="">Select an option</option>
                     <option value="low">Low to High</option>
                     <option value="High">High to Low</option>
+                    <option value="newest">New Product</option>
                     
 
                 </select>
@@ -110,12 +112,12 @@ const Home = () => {
                 <div className="flex justify-center items-center mt-5">
                     <button onClick={() => handlePageChange(page - 1)} disabled={page === 1} className="btn mr-2"><GrCaretPrevious /></button>
                     {/* <p>{currentPage}</p> */}
-                    <span className="flex gap-4">
+                    <span className="flex gap-4 ">
                         {
                             pages?.map((pageNo) => <button onClick={() => {
                                 setCurrentPage(pageNo)
                                 setPage(pageNo)
-                            }} key={pageNo} className={`btn px-5 border-0 ${currentPage === pageNo ? 'bg-secondary-color text-white' : 'text-black'}   `}>{pageNo}</button>)
+                            }} key={pageNo} className={`btn px-5 border-0 ${currentPage === pageNo ? 'bg-primary-color  text-white' : 'text-black'}   `}>{pageNo}</button>)
                         }
                     </span>
                     <button onClick={() => handlePageChange(page + 1)} disabled={currentPage === pages.length} className="btn ml-2"><GrCaretNext /></button>
