@@ -17,6 +17,7 @@ const Home = () => {
     const [count, setCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const [search, SetSearch] = useState('');
+    const [selectedOption, setSelectedOption] = useState('');
     const itemsPerpage = 10;
     const numberOfPages = Math.ceil(count / itemsPerpage);
     const pages = [];
@@ -37,14 +38,14 @@ const Home = () => {
 
     useEffect(() => {
         axiosPublic.get(`/docCount?search=${search}`)
-        .then(data => setCount(data.data.length))
+            .then(data => setCount(data.data.length))
     }, [search])
 
 
     const { data: products = [], isLoading, refetch } = useQuery({
-        queryKey: ['all-products', page, limit, search],
+        queryKey: ['all-products', page, limit, search, selectedOption],
         queryFn: async () => {
-            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}`);
+            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}&sorting=${selectedOption}`);
             // setCount(data.length);
             return data
         }
@@ -63,7 +64,12 @@ const Home = () => {
         SetSearch(e.target.search.value);
     }
 
-    console.log(search)
+    const handleSelectChange = e => {
+        setSelectedOption(e.target.value)
+    }
+    
+
+    console.log(selectedOption)
 
     if (isLoading) {
         <div>
@@ -84,9 +90,19 @@ const Home = () => {
                 </form>
             </div>
 
+            <div>
+                <select onChange={handleSelectChange} value={selectedOption} className="py-3 px-5 bg-teal-500 text-white ">
+                    <option value="">Select an option</option>
+                    <option value="low">Low to High</option>
+                    <option value="High">High to Low</option>
+                    
+
+                </select>
+            </div>
+
 
             <div className="pt-10">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 min-h-screen">
                     {
                         products?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                     }
