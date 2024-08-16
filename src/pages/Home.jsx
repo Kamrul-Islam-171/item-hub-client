@@ -3,7 +3,7 @@ import axios from "axios";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
 import { ScaleLoader } from "react-spinners";
 import ProductCard from "../components/ProductCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 
 
@@ -21,11 +21,26 @@ const Home = () => {
     for (let x = 1; x <= numberOfPages; x++) pages.push(x);
     // console.log(pages)
 
+    // const {data , isLoading : loading} = useQuery({
+    //    queryKey : ['doc-count'], 
+    //    queryFn: async () => {
+    //     const {data} = await axiosPublic.get(`/docCount`);
+    //     // setCount(data);
+    //     return data;
+    //    }
+    // })
+
+    useEffect(() => {
+        axiosPublic.get(`/docCount`)
+        .then(data => setCount(data.data.length))
+    }, [])
+
 
     const { data: products = [], isLoading, refetch } = useQuery({
-        queryKey: ['all-products'],
+        queryKey: ['all-products', page, limit],
         queryFn: async () => {
-            const { data } = await axiosPublic.get(`/products`);
+            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}`);
+            // setCount(data.length);
             return data
         }
     })
