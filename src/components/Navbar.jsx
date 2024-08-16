@@ -111,8 +111,8 @@ const Navbar = () => {
                                     </ul>
                                 </div>
 
-                                <div onClick={scrollToTop} className='border  rounded-full hover:border-primary-color'>
-                                    <button onClick={handleLogout} className="btn rounded-full hover:text-primary-color hover:bg-white hover:border-primary-color bg-primary-color text-white font-medium  border-none px-5">LogOut</button>
+                                <div onClick={scrollToTop} className=''>
+                                    <button onClick={handleLogout} className="btn bg-teal-500 hover:bg-teal-800 text-white font-medium  border-none px-4">LogOut</button>
                                 </div>
                             </>
                             :

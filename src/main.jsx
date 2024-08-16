@@ -10,6 +10,8 @@ import Login from './pages/Login.jsx';
 import { HelmetProvider } from 'react-helmet-async';
 import Registration from './pages/Registration.jsx';
 import { Toaster } from 'react-hot-toast';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -28,18 +30,23 @@ const router = createBrowserRouter([
     element: <Login></Login>
   },
   {
-    path:'/register',
+    path: '/register',
     element: <Registration></Registration>
   }
 ]);
 
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
+
+      <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <RouterProvider router={router} />
         <Toaster></Toaster>
       </AuthProvider>
+      </QueryClientProvider>
     </HelmetProvider>
   </StrictMode>,
 )

@@ -1,0 +1,523 @@
+[
+    {
+      "index": 1,
+      "name": "Wireless Headphones",
+      "image": "https://i.ibb.co/ZLfdSCG/Beats-Solo3-Wireless-Headphones-Rose-Gold-b21056ed-f9b8-4c3d-b546-82eb81a3ba8a-1-c78d9ea73cf1bf20fa5.jpg",
+      "description": "High-quality sound and deep bass with noise-canceling technology. Long-lasting battery, up to 30 hours playback. Comfortable design, perfect for travel, work, or leisure with Bluetooth connectivity.",
+      "price": 150.00,
+      "category": "Electronics",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "09:30 AM"
+      }
+    },
+    {
+      "index": 2,
+      "name": "Smartphone",
+      "image": "https://i.ibb.co/vm6LQ2r/33391821324318.jpg",
+      "description": "5G smartphone with OLED display, powerful processor, and triple-camera system. 128GB storage, fast-charging battery, sleek design, and water-resistant. Ideal for multitasking and high-quality photography.",
+      "price": 999.99,
+      "category": "Electronics",
+      "ratings": 4.7,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "10:00 AM"
+      }
+    },
+    {
+      "index": 3,
+      "name": "Gaming Laptop",
+      "image": "https://i.ibb.co/yW3c654/01hi-B08j7ya-JGJm-Pl2-Yh-RRH-59-v1713199550.jpg",
+      "description": "High-performance gaming laptop with powerful processor and graphics card. Features a full HD display, advanced cooling, and customizable RGB backlighting. Ideal for gamers and professionals.",
+      "price": 1299.99,
+      "category": "Electronics",
+      "ratings": 4.8,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "11:15 AM"
+      }
+    },
+    {
+      "index": 4,
+      "name": "Bluetooth Speaker",
+      "image": "https://i.ibb.co/8YHp4kf/fd-w24-portable-bluetooth-speaker-in-bd-at-bdshopcom.jpg",
+      "description": "Portable Bluetooth speaker with crystal-clear sound and powerful bass. Waterproof and shockproof. 20-hour battery life. Ideal for outdoor adventures or indoor use with quick Bluetooth pairing.",
+      "price": 99.99,
+      "category": "Electronics",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "12:45 PM"
+      }
+    },
+    {
+      "index": 5,
+      "name": "4K Monitor",
+      "image": "https://i.ibb.co/R0vsX7j/HP-U28-4-K-HDR-Monitor-2-500x500-jpg.webp",
+      "description": "27-inch 4K UHD monitor with HDR support. Provides stunning visuals for gaming, design, or movies. Slim design, adjustable stand, and multiple connectivity options for various devices.",
+      "price": 349.99,
+      "category": "Electronics",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "02:00 PM"
+      }
+    },
+    {
+      "index": 6,
+      "name": "Fitness Tracker",
+      "image": "https://i.ibb.co/tCPSfcR/d56eeaa21522d8918ee1cedde9dea91293-rsquare-w600.jpg",
+      "description": "Smart fitness tracker monitoring heart rate, steps, and sleep. Water-resistant design. Syncs with smartphone for notifications. Long battery life up to one week. Comfortable for all-day wear.",
+      "price": 75.00,
+      "category": "Wearables",
+      "ratings": 4.3,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "03:30 PM"
+      }
+    },
+    {
+      "index": 7,
+      "name": "Smartwatch",
+      "image": "https://i.ibb.co/pW0KrFW/51r-vo-EK69-L-AC.jpg",
+      "description": "Stylish smartwatch with fitness tracking features. Monitors heart rate, sleep, and steps. Water-resistant, connects to smartphone for notifications. Customizable watch face, long battery life.",
+      "price": 199.99,
+      "category": "Wearables",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "04:45 PM"
+      }
+    },
+    {
+      "index": 8,
+      "name": "Mechanical Keyboard",
+      "image": "https://i.ibb.co/wSqngzF/71-ZRus2-YNc-L-AC-UF894-1000-QL80.jpg",
+      "description": "Premium mechanical keyboard with tactile keys and customizable RGB backlighting. Durable switches, programmable keys, ergonomic design. Ideal for gaming and professional typing. Compatible with Windows and Mac.",
+      "price": 120.00,
+      "category": "Accessories",
+      "ratings": 4.7,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "06:00 PM"
+      }
+    },
+    {
+      "index": 9,
+      "name": "Wireless Earbuds",
+      "image": "https://i.ibb.co/XZV0JRv/1714908152105505.jpg",
+      "description": "Wireless earbuds with crystal-clear sound and active noise cancellation. Sweat-resistant, comes with portable charging case. Bluetooth 5.0 technology for seamless connectivity. Comfortable fit for all-day use.",
+      "price": 89.99,
+      "category": "Accessories",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "07:15 PM"
+      }
+    },
+    {
+      "index": 10,
+      "name": "Portable Charger",
+      "image": "https://i.ibb.co/SQWfLsq/i-Stock-1409737619.jpg",
+      "description": "High-capacity portable charger with multiple USB ports. Compact, lightweight, fast-charging output. Ideal for travel. Protects against overcharging and short circuits. LED indicator for battery life.",
+      "price": 45.00,
+      "category": "Accessories",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "07:30 PM"
+      }
+    },
+    {
+      "index": 11,
+      "name": "Laptop Stand",
+      "image": "https://i.ibb.co/JktCgw5/giant-142771.jpg",
+      "description": "Adjustable laptop stand for ergonomic use. Elevates laptop to eye level, reducing neck strain. Foldable and portable. Made from durable materials. Ideal for home or office use.",
+      "price": 35.00,
+      "category": "Accessories",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "08:00 PM"
+      }
+    },
+    {
+      "index": 12,
+      "name": "USB Hub",
+      "image": "https://i.ibb.co/HPZY2Cx/f445ac3ce02fab9279e980dc7f5a8679-jpg-750x750-jpg.webp",
+      "description": "Compact USB hub with multiple ports. Expands your device’s connectivity. Supports high-speed data transfer. Plug-and-play design, compatible with most devices. Ideal for expanding USB capabilities.",
+      "price": 25.00,
+      "category": "Accessories",
+      "ratings": 4.2,
+      "created_at": {
+        "date": "2024-08-16",
+        "time": "08:30 PM"
+      }
+    },
+    {
+      "index": 13,
+      "name": "Smart Thermostat",
+      "image": "https://i.ibb.co/x3Y1N6m/05-Cgl-Kk-OYABZy8u-Fj-Jyf-A2o-1-fit-lim-size-919x518-v1605124092.png",
+      "description": "Energy-efficient smart thermostat with Wi-Fi connectivity. Control temperature remotely via app. Learn your preferences to optimize heating and cooling. Easy installation and compatible with most systems.",
+      "price": 120.00,
+      "category": "Electronics",
+      "ratings": 4.7,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "09:00 AM"
+      }
+    },
+    {
+      "index": 14,
+      "name": "Noise-Canceling Earphones",
+      "image": "https://i.ibb.co/FzjFrkx/oppo-enco-m33-wireless-earphones-active-noise-canceling-earphones-2.webp",
+      "description": "Noise-canceling earphones with premium sound quality. Comfortable fit for long listening sessions. Built-in mic for calls. Long battery life and easy Bluetooth pairing for seamless use.",
+      "price": 80.00,
+      "category": "Electronics",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "10:00 AM"
+      }
+    },
+    {
+      "index": 15,
+      "name": "Gaming Mouse",
+      "image": "https://i.ibb.co/NgqRWkq/underscored-best-tested-products-gaming-mouse-corsair-dark-core-rgb-pro-wireless-gaming-mouse.jpg",
+      "description": "Ergonomic gaming mouse with customizable buttons and RGB lighting. High-precision sensor for accurate tracking. Adjustable DPI settings. Comfortable design for long gaming sessions.",
+      "price": 60.00,
+      "category": "Accessories",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "10:30 AM"
+      }
+    },
+    {
+      "index": 16,
+      "name": "External Hard Drive",
+      "image": "https://i.ibb.co/DYvdj2G/main-qimg-157362c6e15e3989165702add6576274-lq.jpg",
+      "description": "High-capacity external hard drive with fast transfer speeds. Portable and durable design. Ideal for backing up files and expanding storage. Compatible with both Windows and Mac systems.",
+      "price": 100.00,
+      "category": "Electronics",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "11:00 AM"
+      }
+    },
+    {
+      "index": 17,
+      "name": "Smart Light Bulb",
+      "image": "https://i.ibb.co/XCd1kKY/8366f77b7c23f2d5ac57385f0ccdffc5.jpg",
+      "description": "Smart light bulb with adjustable brightness and color. Controlled via app or voice assistant. Energy-efficient LED technology. Easy to install and compatible with smart home systems.",
+      "price": 30.00,
+      "category": "Electronics",
+      "ratings": 4.3,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "11:30 AM"
+      }
+    },
+    {
+      "index": 18,
+      "name": "VR Headset",
+      "image": "https://i.ibb.co/FVq3dyX/61-Gh-F-JUXGL-AC-UF1000-1000-QL80.jpg",
+      "description": "Virtual reality headset with immersive 3D experience. High-resolution display and adjustable straps. Compatible with various VR games and applications. Lightweight and comfortable for extended use.",
+      "price": 299.99,
+      "category": "Electronics",
+      "ratings": 4.8,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "12:00 PM"
+      }
+    },
+    {
+      "index": 19,
+      "name": "Smart Home Hub",
+      "image": "https://i.ibb.co/981Tg17/YTC4044-GL-wr-01.jpg",
+      "description": "Central hub for controlling smart home devices. Supports multiple protocols and integrations. Easy setup and management via app. Compatible with various smart home products for streamlined control.",
+      "price": 150.00,
+      "category": "Electronics",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "01:00 PM"
+      }
+    },
+    {
+      "index": 20,
+      "name": "Wireless Charger",
+      "image": "https://i.ibb.co/nRb8p1h/960x0.jpg",
+      "description": "Convenient wireless charger for Qi-compatible devices. Fast charging with sleek, compact design. Non-slip surface and built-in safety features. Ideal for home or office use.",
+      "price": 35.00,
+      "category": "Accessories",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "01:30 PM"
+      }
+    },
+    {
+      "index": 21,
+      "name": "Smart Plug",
+      "image": "https://i.ibb.co/4TCkcsq/41et-Cs-F48-NL.jpg",
+      "description": "Smart plug with remote control via app. Monitor and control appliances from anywhere. Works with voice assistants. Easy to set up, compact design, and energy monitoring features.",
+      "price": 25.00,
+      "category": "Electronics",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "02:00 PM"
+      }
+    },
+    {
+      "index": 22,
+      "name": "Keyboard Case",
+      "image": "https://i.ibb.co/gjH1mLC/ad809d3aa2a60b252317a5a27bfc3816-jpg-720x720q80.jpg",
+      "description": "Protective keyboard case with built-in Bluetooth keyboard. Compatible with tablets and e-readers. Durable material, adjustable angles for comfortable typing. Ideal for on-the-go productivity.",
+      "price": 50.00,
+      "category": "Accessories",
+      "ratings": 4.3,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "02:30 PM"
+      }
+    },
+    {
+      "index": 23,
+      "name": "Power Bank",
+      "image": "https://i.ibb.co/mXKnn3W/borofone-bt19a-universal-mobile-power-bank-15000mah-dual-ports-output-800x800.jpg",
+      "description": "Compact power bank with high capacity. Multiple USB ports for charging devices. Fast charging technology and LED indicator for battery life. Ideal for travel and daily use.",
+      "price": 40.00,
+      "category": "Accessories",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "03:00 PM"
+      }
+    },
+    {
+      "index": 24,
+      "name": "Tablet Stand",
+      "image": "https://i.ibb.co/jDf2390/UGREEN-LP134-40393-Foldable-Metal-Tablet-Stand-600x600.jpg",
+      "description": "Adjustable tablet stand for hands-free use. Durable and portable with multiple angles. Perfect for watching videos, reading, or video calls. Compatible with various tablet sizes.",
+      "price": 28.00,
+      "category": "Accessories",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "03:30 PM"
+      }
+    },
+    {
+      "index": 25,
+      "name": "Car Phone Mount",
+      "image": "https://i.ibb.co/Gnpj9cw/71-b-COg-Ca-YL-AC-UF894-1000-QL80.jpg",
+      "description": "Adjustable car phone mount with secure grip. Easy installation on dashboard or windshield. 360-degree rotation for optimal viewing angles. Keeps phone accessible and visible while driving.",
+      "price": 20.00,
+      "category": "Accessories",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "04:00 PM"
+      }
+    },
+    {
+      "index": 26,
+      "name": "Cable Organizer",
+      "image": "https://i.ibb.co/RzrcR3f/0b789fe84a48f12f196c4625be7b0dc5-jpg-750x750-jpg.webp",
+      "description": "Neat cable organizer to keep cords and cables tidy. Compact design with multiple slots for different cables. Ideal for home or travel use. Prevents tangling and damage to cables.",
+      "price": 15.00,
+      "category": "Accessories",
+      "ratings": 4.3,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "04:30 PM"
+      }
+    },
+    {
+      "index": 27,
+      "name": "Portable Air Purifier",
+      "image": "https://i.ibb.co/Wk8hk0d/qt-air-purifier-front-angle.jpg",
+      "description": "Compact portable air purifier with HEPA filter. Removes allergens, dust, and odors. Ideal for use in small spaces like offices or cars. Quiet operation and easy to use.",
+      "price": 75.00,
+      "category": "Electronics",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "05:00 PM"
+      }
+    },
+    {
+      "index": 28,
+      "name": "Smart Doorbell",
+      "image": "https://i.ibb.co/B3Xnkfy/Xiaomi-Smart-Doorbell-3.jpg",
+      "description": "Smart doorbell with HD video and two-way audio. Connects to smartphone for remote viewing and communication. Motion detection and night vision features. Easy installation and setup.",
+      "price": 120.00,
+      "category": "Electronics",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "05:30 PM"
+      }
+    },
+    {
+      "index": 29,
+      "name": "Fitness Smartband",
+      "image": "https://i.ibb.co/2hyRzGj/xiaomi-smart-band-7-price-in-bd-gearjet-1.webp",
+      "description": "Smartband with fitness tracking features. Monitors steps, heart rate, and sleep. Water-resistant with long battery life. Syncs with smartphone for notifications and health insights.",
+      "price": 60.00,
+      "category": "Wearables",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "06:00 PM"
+      }
+    },
+    {
+      "index": 30,
+      "name": "Smart Ring",
+      "image": "https://i.ibb.co/hDRf7QM/smarty-rings.jpg",
+      "description": "Elegant smart ring with fitness tracking and notifications. Tracks activity, heart rate, and sleep. Compatible with smartphone apps. Stylish design and long battery life.",
+      "price": 150.00,
+      "category": "Wearables",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "06:30 PM"
+      }
+    },
+    {
+      "index": 31,
+      "name": "Smart Glasses",
+      "image": "https://i.ibb.co/YbhgTpR/512-CXNASno-L-AC-SL1500.jpg",
+      "description": "Innovative smart glasses with built-in display. Augmented reality features for immersive experiences. Voice commands and touch controls. Lightweight and comfortable for all-day wear.",
+      "price": 250.00,
+      "category": "Wearables",
+      "ratings": 4.7,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "07:00 PM"
+      }
+    },
+    {
+      "index": 32,
+      "name": "Action Camera",
+      "image": "https://i.ibb.co/QpFVmgP/untitled1-17.jpg",
+      "description": "Compact action camera with 4K video recording. Waterproof and durable for extreme conditions. Features wide-angle lens and built-in stabilization. Ideal for adventure and sports enthusiasts.",
+      "price": 199.99,
+      "category": "Electronics",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "07:30 PM"
+      }
+    },
+    {
+      "index": 33,
+      "name": "Digital Camera",
+      "image": "https://i.ibb.co/WpWTBGk/ihv-Xt-ANQ4-CQPY04-Newv7d-FPWPQkh-Kdvs5x-Ku-Z3-CN.jpg",
+      "description": "High-resolution digital camera with advanced features. Includes zoom lens and image stabilization. Ideal for photography enthusiasts. Easy-to-use controls and high-quality image capture.",
+      "price": 450.00,
+      "category": "Electronics",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "08:00 PM"
+      }
+    },
+    {
+      "index": 34,
+      "name": "Electric Kettle",
+      "image": "https://i.ibb.co/8c0JPZF/prestige-pt-18ek-electric-kettle.jpg",
+      "description": "Electric kettle with rapid boiling technology. Auto shut-off and boil-dry protection. Sleek design with easy-to-read water level indicator. Ideal for making tea, coffee, or instant meals.",
+      "price": 40.00,
+      "category": "Home Appliances",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "08:30 PM"
+      }
+    },
+    {
+      "index": 35,
+      "name": "Blender",
+      "image": "https://i.ibb.co/bzLPM0k/3cbba532-5f03-43af-9a8c-d29c8528933a-SL480.jpg",
+      "description": "High-power blender with multiple speed settings. Perfect for smoothies, soups, and sauces. Durable stainless steel blades and easy-to-clean design. Includes measuring cup and recipe book.",
+      "price": 85.00,
+      "category": "Home Appliances",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "09:00 PM"
+      }
+    },
+    {
+      "index": 36,
+      "name": "Coffee Maker",
+      "image": "https://i.ibb.co/W6BGKpW/philips-hd7431-coffee-maker-black.jpg",
+      "description": "Programmable coffee maker with large capacity. Brew strength control and auto-off feature. Includes reusable filter and warming plate. Easy to use and maintain for a perfect cup every time.",
+      "price": 70.00,
+      "category": "Home Appliances",
+      "ratings": 4.7,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "09:30 PM"
+      }
+    },
+    {
+      "index": 37,
+      "name": "Air Fryer",
+      "image": "https://i.ibb.co/xzqrbbb/miyako-af-618-new.jpg",
+      "description": "Compact air fryer with adjustable temperature settings. Cooks food with less oil, providing crispy results. Includes detachable basket for easy cleaning. Ideal for healthy cooking.",
+      "price": 99.99,
+      "category": "Home Appliances",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "10:00 PM"
+      }
+    },
+    {
+      "index": 38,
+      "name": "Vacuum Cleaner",
+      "image": "https://i.ibb.co/QnfqxYX/Tolsen-79608.jpg",
+      "description": "Powerful vacuum cleaner with multiple attachments. Features HEPA filter and adjustable suction settings. Ideal for carpets, hardwood floors, and upholstery. Compact design for easy storage.",
+      "price": 150.00,
+      "category": "Home Appliances",
+      "ratings": 4.6,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "10:30 PM"
+      }
+    },
+    {
+      "index": 39,
+      "name": "Toaster",
+      "image": "https://i.ibb.co/KGgcBsS/9465574-R-Z001-A-w-750-h-440-qlt-70.jpg",
+      "description": "Four-slice toaster with adjustable browning control. Includes defrost and reheat functions. Compact design with crumb tray for easy cleanup. Ideal for making breakfast quickly and conveniently.",
+      "price": 35.00,
+      "category": "Home Appliances",
+      "ratings": 4.4,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "11:00 PM"
+      }
+    },
+    {
+      "index": 40,
+      "name": "Microwave Oven",
+      "image": "https://i.ibb.co/ynH09Pg/MC3286-BRUM-microwave-ovens-Front-view-D-01.jpg",
+      "description": "Compact microwave oven with multiple power levels. Defrost and reheat functions with easy-to-use controls. Includes turntable for even cooking. Ideal for quick meal preparation.",
+      "price": 60.00,
+      "category": "Home Appliances",
+      "ratings": 4.5,
+      "created_at": {
+        "date": "2024-08-17",
+        "time": "11:30 PM"
+      }
+    }
+  ]
+  
