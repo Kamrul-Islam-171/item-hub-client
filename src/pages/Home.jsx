@@ -18,6 +18,7 @@ const Home = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [search, SetSearch] = useState('');
     const [selectedOption, setSelectedOption] = useState('');
+    const [brand, setBrand] = useState('');
     const itemsPerpage = 10;
     const numberOfPages = Math.ceil(count / itemsPerpage);
     const pages = [];
@@ -37,15 +38,15 @@ const Home = () => {
     // })
 
     useEffect(() => {
-        axiosPublic.get(`/docCount?search=${search}`)
+        axiosPublic.get(`/docCount?search=${search}&brand=${brand}`)
             .then(data => setCount(data.data.length))
-    }, [search])
+    }, [search, brand])
 
 
     const { data: products = [], isLoading, refetch } = useQuery({
-        queryKey: ['all-products', page, limit, search, selectedOption],
+        queryKey: ['all-products', page, limit, search, selectedOption, brand],
         queryFn: async () => {
-            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}&sorting=${selectedOption}`);
+            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}&sorting=${selectedOption}&brand=${brand}`);
             // setCount(data.length);
             return data
         }
@@ -66,6 +67,10 @@ const Home = () => {
 
     const handleSelectChange = e => {
         setSelectedOption(e.target.value)
+    }
+
+    const handleSelectBrand = e => {
+        setBrand(e.target.value);
     }
     
 
@@ -88,6 +93,20 @@ const Home = () => {
                     </div>
                     <button className="btn bg-teal-500 border-none text-white text-lg hover:bg-teal-800">Go <FaArrowRightLong /></button>
                 </form>
+            </div>
+
+            <div className=" flex flex-col items-center gap-5 mt-10">
+                <p className="text-xl font-semibold">Select Your Brand</p>
+                <select onChange={handleSelectBrand} value={brand} className="py-3 px-5 bg-teal-500 text-white ">
+                    <option value="">Select an option</option>
+                    <option value="apple">Apple</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="hp">HP</option>
+                    <option value="sony">Sony</option>
+                   
+                    
+
+                </select>
             </div>
 
             <div className=" flex flex-col items-center gap-5 mt-10">

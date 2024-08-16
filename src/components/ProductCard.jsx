@@ -14,10 +14,14 @@ const ProductCard = ({ product }) => {
                         <p>{product?.created_at.date}</p>
                         <p>{product?.created_at.time}</p>
                     </div>
+
                     <div className="flex  gap-20 items-center">
                         <h2 className="card-title">{product?.name}</h2>
                         <p className="text-teal-500 text-lg">{product?.ratings}</p>
                     </div>
+                    <p className="text-lg">
+                       Brand : <span className="text-teal-500 ml-5">{product?.brand} </span>
+                    </p>
                     <p>{product?.description.substring(0, 50)}...</p>
                     <div className="card-actions justify-end text-teal-500 font-bold">
                         <p className="text-xl">${product?.price}</p>
