@@ -19,6 +19,7 @@ const Home = () => {
     const [search, SetSearch] = useState('');
     const [selectedOption, setSelectedOption] = useState('');
     const [brand, setBrand] = useState('');
+    const [category, setCategory] = useState('');
     const itemsPerpage = 10;
     const numberOfPages = Math.ceil(count / itemsPerpage);
     const pages = [];
@@ -38,15 +39,15 @@ const Home = () => {
     // })
 
     useEffect(() => {
-        axiosPublic.get(`/docCount?search=${search}&brand=${brand}`)
+        axiosPublic.get(`/docCount?search=${search}&brand=${brand}&category=${category}`)
             .then(data => setCount(data.data.length))
-    }, [search, brand])
+    }, [search, brand, category])
 
 
     const { data: products = [], isLoading, refetch } = useQuery({
-        queryKey: ['all-products', page, limit, search, selectedOption, brand],
+        queryKey: ['all-products', page, limit, search, selectedOption, brand, category],
         queryFn: async () => {
-            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}&sorting=${selectedOption}&brand=${brand}`);
+            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}&sorting=${selectedOption}&brand=${brand}&category=${category}`);
             // setCount(data.length);
             return data
         }
@@ -72,9 +73,13 @@ const Home = () => {
     const handleSelectBrand = e => {
         setBrand(e.target.value);
     }
-    
 
-    console.log(selectedOption)
+    const handleSelectCategory = e => {
+        setCategory(e.target.value);
+    }
+
+
+    // console.log(selectedOption)
 
     if (isLoading) {
         <div>
@@ -95,18 +100,40 @@ const Home = () => {
                 </form>
             </div>
 
-            <div className=" flex flex-col items-center gap-5 mt-10">
-                <p className="text-xl font-semibold">Select Your Brand</p>
-                <select onChange={handleSelectBrand} value={brand} className="py-3 px-5 bg-teal-500 text-white ">
-                    <option value="">Select an option</option>
-                    <option value="apple">Apple</option>
-                    <option value="samsung">Samsung</option>
-                    <option value="hp">HP</option>
-                    <option value="sony">Sony</option>
-                   
-                    
+            <div className="flex items-center  justify-evenly">
+                <div className=" flex flex-col items-center gap-5 mt-10">
+                    <p className="text-xl font-semibold">Select Your Brand</p>
+                    <select onChange={handleSelectBrand} value={brand} className="py-3 px-5 bg-teal-500 text-white ">
+                        <option value="">Select an option</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="hp">HP</option>
+                        <option value="sony">Sony</option>
 
-                </select>
+
+
+                    </select>
+                </div>
+                <div className=" flex flex-col items-center gap-5 mt-10">
+                    <p className="text-xl font-semibold">Select Your Category</p>
+                    <select onChange={handleSelectCategory} value={category} className="py-3 px-5 bg-teal-500 text-white ">
+                        <option value="">Select an option</option>
+                        <option value="Wearables">Wearables</option>
+                        <option value="Accessories">Accessories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Home Appliances">Home Appliances</option>
+
+                    </select>
+                </div>
+                <div>
+                    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row  items-center justify-center gap-5">
+                        <div>
+                            <p className="text-xl font-semibold">Select Your Category</p>
+                            <input name="search" className="w-full py-3 px-5 border-teal-300 border outline-none" type="text" placeholder="Search by product name" />
+                        </div>
+                        <button className="btn bg-teal-500 border-none text-white text-lg hover:bg-teal-800">Go <FaArrowRightLong /></button>
+                    </form>
+                </div>
             </div>
 
             <div className=" flex flex-col items-center gap-5 mt-10">
@@ -116,7 +143,7 @@ const Home = () => {
                     <option value="low">Low to High</option>
                     <option value="High">High to Low</option>
                     <option value="newest">New Product</option>
-                    
+
 
                 </select>
             </div>
