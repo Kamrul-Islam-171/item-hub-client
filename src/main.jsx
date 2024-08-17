@@ -11,17 +11,22 @@ import { HelmetProvider } from 'react-helmet-async';
 import Registration from './pages/Registration.jsx';
 import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ErrorPage from './pages/ErrorPage.jsx';
+import About from './pages/About.jsx';
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts></MainLayouts>,
-    errorElement: <p1>Opps Somthing went wrong. try again!</p1>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
         element: <Home></Home>
+      }, {
+        path : '/about',
+        element : <About></About>
       }
     ]
   },

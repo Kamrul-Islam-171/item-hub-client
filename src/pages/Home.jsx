@@ -87,7 +87,7 @@ const Home = () => {
         setMax(e.target.max.value);
     }
 
-    console.log(typeof(min));
+    console.log(typeof (min));
 
     if (isLoading) {
         <div>
@@ -137,11 +137,11 @@ const Home = () => {
                     <form onSubmit={handlePrice} className="flex flex-col md:flex-row  items-center justify-center gap-5">
                         <div>
                             <p className="text-xl font-semibold mb-3">Min Price</p>
-                            <input name="min" className="w-full py-3 px-5 border-teal-300 border outline-none" type="number"  placeholder="Min" />
+                            <input name="min" className="w-full py-3 px-5 border-teal-300 border outline-none" type="number" placeholder="Min" />
                         </div>
                         <div>
                             <p className="text-xl font-semibold mb-3">Max Price</p>
-                            <input name="max" className="w-full py-3 px-5 border-teal-300 border outline-none" type="number"  placeholder="Max" />
+                            <input name="max" className="w-full py-3 px-5 border-teal-300 border outline-none" type="number" placeholder="Max" />
                         </div>
                         <button className="btn bg-teal-500 border-none lg:mt-10 md:mt-10 text-white text-lg hover:bg-teal-800">Go <FaArrowRightLong /></button>
                     </form>
@@ -161,26 +161,29 @@ const Home = () => {
             </div>
 
 
-            <div className="pt-10">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 min-h-screen">
-                    {
-                        products?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
-                    }
-                </div>
-                <div className="flex justify-center items-center mt-5">
-                    <button onClick={() => handlePageChange(page - 1)} disabled={page === 1} className="btn mr-2"><GrCaretPrevious /></button>
-                    {/* <p>{currentPage}</p> */}
-                    <span className="flex gap-4 ">
+            {
+                products?.length > 0 ? <div className="pt-10">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 min-h-screen">
                         {
-                            pages?.map((pageNo) => <button onClick={() => {
-                                setCurrentPage(pageNo)
-                                setPage(pageNo)
-                            }} key={pageNo} className={`btn px-5 border-0 ${currentPage === pageNo ? 'bg-primary-color  text-white' : 'text-black'}   `}>{pageNo}</button>)
+                            products?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
                         }
-                    </span>
-                    <button onClick={() => handlePageChange(page + 1)} disabled={currentPage === pages.length} className="btn ml-2"><GrCaretNext /></button>
-                </div>
-            </div>
+                    </div>
+                    <div className="flex justify-center items-center mt-5">
+                        <button onClick={() => handlePageChange(page - 1)} disabled={page === 1} className="btn mr-2"><GrCaretPrevious /></button>
+                        {/* <p>{currentPage}</p> */}
+                        <span className="flex gap-4 ">
+                            {
+                                pages?.map((pageNo) => <button onClick={() => {
+                                    setCurrentPage(pageNo)
+                                    setPage(pageNo)
+                                }} key={pageNo} className={`btn px-5 border-0 ${currentPage === pageNo ? 'bg-primary-color  text-white' : 'text-black'}   `}>{pageNo}</button>)
+                            }
+                        </span>
+                        <button onClick={() => handlePageChange(page + 1)} disabled={currentPage === pages.length} className="btn ml-2"><GrCaretNext /></button>
+                    </div>
+                </div> : <p className="text-6xl my-32 text-center">No Data found</p>
+            }
+
         </div>
     );
 };
