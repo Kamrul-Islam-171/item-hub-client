@@ -20,7 +20,10 @@ const Home = () => {
     const [selectedOption, setSelectedOption] = useState('');
     const [brand, setBrand] = useState('');
     const [category, setCategory] = useState('');
+    const [min, setMin] = useState(0);
+    const [max, setMax] = useState(1000000);
     const itemsPerpage = 10;
+
     const numberOfPages = Math.ceil(count / itemsPerpage);
     const pages = [];
 
@@ -39,15 +42,15 @@ const Home = () => {
     // })
 
     useEffect(() => {
-        axiosPublic.get(`/docCount?search=${search}&brand=${brand}&category=${category}`)
+        axiosPublic.get(`/docCount?search=${search}&brand=${brand}&category=${category}&min=${min}&max=${max}`)
             .then(data => setCount(data.data.length))
-    }, [search, brand, category])
+    }, [search, brand, category, min, max])
 
 
     const { data: products = [], isLoading, refetch } = useQuery({
-        queryKey: ['all-products', page, limit, search, selectedOption, brand, category],
+        queryKey: ['all-products', page, limit, search, selectedOption, brand, category, min, max],
         queryFn: async () => {
-            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}&sorting=${selectedOption}&brand=${brand}&category=${category}`);
+            const { data } = await axiosPublic.get(`/products?page=${page}&limit=${limit}&search=${search}&sorting=${selectedOption}&brand=${brand}&category=${category}&min=${min}&max=${max}`);
             // setCount(data.length);
             return data
         }
@@ -78,8 +81,13 @@ const Home = () => {
         setCategory(e.target.value);
     }
 
+    const handlePrice = e => {
+        e.preventDefault();
+        setMin(e.target.min.value);
+        setMax(e.target.max.value);
+    }
 
-    // console.log(selectedOption)
+    console.log(typeof(min));
 
     if (isLoading) {
         <div>
@@ -100,7 +108,7 @@ const Home = () => {
                 </form>
             </div>
 
-            <div className="flex items-center  justify-evenly">
+            <div className="flex items-center flex-wrap  justify-evenly">
                 <div className=" flex flex-col items-center gap-5 mt-10">
                     <p className="text-xl font-semibold">Select Your Brand</p>
                     <select onChange={handleSelectBrand} value={brand} className="py-3 px-5 bg-teal-500 text-white ">
@@ -125,13 +133,17 @@ const Home = () => {
 
                     </select>
                 </div>
-                <div>
-                    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row  items-center justify-center gap-5">
+                <div className="flex flex-col items-center gap-5 mt-10">
+                    <form onSubmit={handlePrice} className="flex flex-col md:flex-row  items-center justify-center gap-5">
                         <div>
-                            <p className="text-xl font-semibold">Select Your Category</p>
-                            <input name="search" className="w-full py-3 px-5 border-teal-300 border outline-none" type="text" placeholder="Search by product name" />
+                            <p className="text-xl font-semibold mb-3">Min Price</p>
+                            <input name="min" className="w-full py-3 px-5 border-teal-300 border outline-none" type="number"  placeholder="Min" />
                         </div>
-                        <button className="btn bg-teal-500 border-none text-white text-lg hover:bg-teal-800">Go <FaArrowRightLong /></button>
+                        <div>
+                            <p className="text-xl font-semibold mb-3">Max Price</p>
+                            <input name="max" className="w-full py-3 px-5 border-teal-300 border outline-none" type="number"  placeholder="Max" />
+                        </div>
+                        <button className="btn bg-teal-500 border-none lg:mt-10 md:mt-10 text-white text-lg hover:bg-teal-800">Go <FaArrowRightLong /></button>
                     </form>
                 </div>
             </div>
