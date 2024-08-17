@@ -56,6 +56,14 @@ const Home = () => {
         }
     })
 
+    // if (isLoading) {
+    //     <div>
+    //         <div className="flex justify-center items-center h-screen">
+    //             <ScaleLoader color="#7851a9" />
+    //         </div>
+    //     </div>
+    // }
+
     const handlePageChange = (newPage) => {
         setPage(newPage);
         setCurrentPage(newPage)
@@ -87,14 +95,16 @@ const Home = () => {
         setMax(e.target.max.value);
     }
 
-    console.log(typeof (min));
+    // console.log(isLoading);
 
     if (isLoading) {
-        <div>
-            <div className="flex justify-center items-center h-screen">
-                <ScaleLoader color="#7851a9" />
+        return (
+            <div>
+                <div className="flex justify-center items-center h-screen">
+                    <ScaleLoader color="#009688" />
+                </div>
             </div>
-        </div>
+        )
     }
     return (
         <div className="mt-[100px] container mx-auto">
